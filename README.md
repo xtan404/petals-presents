@@ -1,2 +1,2 @@
-# petals-presents
-an e-commerce website project with APIs
+# petalsandpresents
+an e-commerce website project
