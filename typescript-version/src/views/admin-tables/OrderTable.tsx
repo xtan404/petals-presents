@@ -48,52 +48,12 @@ const OrderTable = () => {
         <Table sx={{ minWidth: 900 }} aria-label='table in dashboard'>
           <TableHead>
             <TableRow>
-              <TableCell>Alert</TableCell>
+              <TableCell>Order</TableCell>
               <TableCell>Description</TableCell>
               <TableCell>Date</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-              <TableRow sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
-                <TableCell sx={{ py: theme => `${theme.spacing(0.5)} !important` }}>
-                  <Box sx={{ display: 'inline-block', padding: '4px 8px', backgroundColor: 'red', borderRadius: '16px', color: 'white' }}>
-                    <Typography sx={{ fontWeight: 500, fontSize: '0.875rem !important' }}><strong>Danger</strong></Typography>
-                  </Box>
-                </TableCell>
-                <TableCell>Immediate Evacuation Required! The water level has reached the red threshold.
-                  Please evacuate immediately to ensure your safety.</TableCell>
-                <TableCell>November 8, 2023</TableCell>
-              </TableRow>
-              <TableRow sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
-                <TableCell sx={{ py: theme => `${theme.spacing(0.5)} !important` }}>
-                  <Box sx={{ display: 'inline-block', padding: '4px 8px', backgroundColor: 'red', borderRadius: '16px', color: 'white' }}>
-                    <Typography sx={{ fontWeight: 500, fontSize: '0.875rem !important' }}><strong>Danger</strong></Typography>
-                  </Box>
-                </TableCell>
-                <TableCell>Immediate Evacuation Required! The water level has reached the red threshold.
-                  Please evacuate immediately to ensure your safety.</TableCell>
-                <TableCell>November 8, 2023</TableCell>
-              </TableRow>
-              <TableRow sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
-                <TableCell sx={{ py: theme => `${theme.spacing(0.5)} !important` }}>
-                  <Box sx={{ display: 'inline-block', padding: '4px 8px', backgroundColor: 'orange', borderRadius: '16px', color: 'white' }}>
-                    <Typography sx={{ fontWeight: 500, fontSize: '0.875rem !important' }}><strong>Warning</strong></Typography>
-                  </Box>
-                </TableCell>
-                <TableCell>Immediate Evacuation Required! The water level has reached the red threshold.
-                  Please evacuate immediately to ensure your safety.</TableCell>
-                <TableCell>November 8, 2023</TableCell>
-              </TableRow>
-              <TableRow sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
-                <TableCell sx={{ py: theme => `${theme.spacing(0.5)} !important` }}>
-                  <Box sx={{ display: 'inline-block', padding: '4px 8px', backgroundColor: 'yellow', borderRadius: '16px', color: 'white' }}>
-                    <Typography sx={{ fontWeight: 500, fontSize: '0.875rem !important' }}><strong>Caution</strong></Typography>
-                  </Box>
-                </TableCell>
-                <TableCell>Immediate Evacuation Required! The water level has reached the red threshold.
-                  Please evacuate immediately to ensure your safety.</TableCell>
-                <TableCell>November 8, 2023</TableCell>
-              </TableRow>
               <TableRow sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
                 <TableCell sx={{ py: theme => `${theme.spacing(0.5)} !important` }}>
                   <Box sx={{ display: 'inline-block', padding: '4px 8px', backgroundColor: 'red', borderRadius: '16px', color: 'white' }}>

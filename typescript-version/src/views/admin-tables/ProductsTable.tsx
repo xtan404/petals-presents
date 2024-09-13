@@ -82,15 +82,14 @@ const ProductsTable = () => {
           <TableHead>
             <TableRow>
               <TableCell>ID</TableCell>
-              <TableCell>Last Name</TableCell>
-              <TableCell>First Name</TableCell>
-              <TableCell>Middle Name</TableCell>
-              <TableCell>Sex</TableCell>
-              <TableCell>No. of Dependents</TableCell>
+              <TableCell>Image</TableCell>
+              <TableCell>Product Name</TableCell>
+              <TableCell>Description</TableCell>
+              <TableCell>Price</TableCell>
               <TableCell>Actions</TableCell>
             </TableRow>
           </TableHead>
-          {/*<TableBody>
+          <TableBody>
             {data.map((product) => (
               <TableRow key={product.productID} sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
                 <TableCell>{product.productID}</TableCell>
@@ -116,178 +115,6 @@ const ProductsTable = () => {
                 </TableCell>
               </TableRow>
             ))}
-          </TableBody>*/}
-          <TableBody>
-            
-              <TableRow  sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
-                <TableCell>1</TableCell>
-                <TableCell>
-                  Dela Cruz
-                </TableCell>
-                <TableCell>Juan</TableCell>
-                <TableCell>Escobar</TableCell>
-                <TableCell>Male</TableCell>
-                <TableCell>2</TableCell>
-                <TableCell>
-                  <Box display="flex" alignItems="center">
-                    <PencilOutline
-                      color="primary"
-                      style={{ cursor: 'pointer', marginRight: 16 }}
-                      /*onClick={() => handleEditClick()}*/
-                    />
-                    <TrashCanOutline
-                      color="error"
-                      style={{ cursor: 'pointer' }}
-                      /*onClick={() => handleDeleteItem()}*/
-                    />
-                  </Box>
-                </TableCell>
-              </TableRow>
-              <TableRow  sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
-                <TableCell>1</TableCell>
-                <TableCell>
-                  Dela Cruz
-                </TableCell>
-                <TableCell>Juan</TableCell>
-                <TableCell>Escobar</TableCell>
-                <TableCell>Male</TableCell>
-                <TableCell>2</TableCell>
-                <TableCell>
-                  <Box display="flex" alignItems="center">
-                    <PencilOutline
-                      color="primary"
-                      style={{ cursor: 'pointer', marginRight: 16 }}
-                      /*onClick={() => handleEditClick()}*/
-                    />
-                    <TrashCanOutline
-                      color="error"
-                      style={{ cursor: 'pointer' }}
-                      /*onClick={() => handleDeleteItem()}*/
-                    />
-                  </Box>
-                </TableCell>
-              </TableRow>
-              <TableRow  sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
-                <TableCell>1</TableCell>
-                <TableCell>
-                  Dela Cruz
-                </TableCell>
-                <TableCell>Juan</TableCell>
-                <TableCell>Escobar</TableCell>
-                <TableCell>Male</TableCell>
-                <TableCell>2</TableCell>
-                <TableCell>
-                  <Box display="flex" alignItems="center">
-                    <PencilOutline
-                      color="primary"
-                      style={{ cursor: 'pointer', marginRight: 16 }}
-                      /*onClick={() => handleEditClick()}*/
-                    />
-                    <TrashCanOutline
-                      color="error"
-                      style={{ cursor: 'pointer' }}
-                      /*onClick={() => handleDeleteItem()}*/
-                    />
-                  </Box>
-                </TableCell>
-              </TableRow>
-              <TableRow  sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
-                <TableCell>1</TableCell>
-                <TableCell>
-                  Dela Cruz
-                </TableCell>
-                <TableCell>Juan</TableCell>
-                <TableCell>Escobar</TableCell>
-                <TableCell>Male</TableCell>
-                <TableCell>2</TableCell>
-                <TableCell>
-                  <Box display="flex" alignItems="center">
-                    <PencilOutline
-                      color="primary"
-                      style={{ cursor: 'pointer', marginRight: 16 }}
-                      /*onClick={() => handleEditClick()}*/
-                    />
-                    <TrashCanOutline
-                      color="error"
-                      style={{ cursor: 'pointer' }}
-                      /*onClick={() => handleDeleteItem()}*/
-                    />
-                  </Box>
-                </TableCell>
-              </TableRow>
-              <TableRow  sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
-                <TableCell>1</TableCell>
-                <TableCell>
-                  Dela Cruz
-                </TableCell>
-                <TableCell>Juan</TableCell>
-                <TableCell>Escobar</TableCell>
-                <TableCell>Male</TableCell>
-                <TableCell>2</TableCell>
-                <TableCell>
-                  <Box display="flex" alignItems="center">
-                    <PencilOutline
-                      color="primary"
-                      style={{ cursor: 'pointer', marginRight: 16 }}
-                      /*onClick={() => handleEditClick()}*/
-                    />
-                    <TrashCanOutline
-                      color="error"
-                      style={{ cursor: 'pointer' }}
-                      /*onClick={() => handleDeleteItem()}*/
-                    />
-                  </Box>
-                </TableCell>
-              </TableRow>
-              <TableRow  sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
-                <TableCell>1</TableCell>
-                <TableCell>
-                  Dela Cruz
-                </TableCell>
-                <TableCell>Juan</TableCell>
-                <TableCell>Escobar</TableCell>
-                <TableCell>Male</TableCell>
-                <TableCell>2</TableCell>
-                <TableCell>
-                  <Box display="flex" alignItems="center">
-                    <PencilOutline
-                      color="primary"
-                      style={{ cursor: 'pointer', marginRight: 16 }}
-                      /*onClick={() => handleEditClick()}*/
-                    />
-                    <TrashCanOutline
-                      color="error"
-                      style={{ cursor: 'pointer' }}
-                      /*onClick={() => handleDeleteItem()}*/
-                    />
-                  </Box>
-                </TableCell>
-              </TableRow>
-              <TableRow  sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
-                <TableCell>1</TableCell>
-                <TableCell>
-                  Dela Cruz
-                </TableCell>
-                <TableCell>Juan</TableCell>
-                <TableCell>Escobar</TableCell>
-                <TableCell>Male</TableCell>
-                <TableCell>2</TableCell>
-                <TableCell>
-                  <Box display="flex" alignItems="center">
-                    <PencilOutline
-                      color="primary"
-                      style={{ cursor: 'pointer', marginRight: 16 }}
-                      /*onClick={() => handleEditClick()}*/
-                    />
-                    <TrashCanOutline
-                      color="error"
-                      style={{ cursor: 'pointer' }}
-                      /*onClick={() => handleDeleteItem()}*/
-                    />
-                  </Box>
-                </TableCell>
-              </TableRow>
-            
           </TableBody>
         </Table>
       </TableContainer>

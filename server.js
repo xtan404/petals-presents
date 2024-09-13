@@ -168,7 +168,7 @@ app.post('/register', (request, response) => {
     })
 })
 
-/*app.post('/login', (request, response) => {
+app.post('/login', (request, response) => {
     const sql = "SELECT FROM accounts WHERE email = ? AND password = ?"
     db.query(sql, [request.body.email, request.body.password], (error, result) => {
         if (error) return response.json({ Message: "Error inside server" })
@@ -179,5 +179,5 @@ app.post('/register', (request, response) => {
             return response.json({Login: false})
         }
     })
-})*/
+})
 

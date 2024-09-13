@@ -65,9 +65,9 @@ const VerticalNavHeader = (props: Props) => {
           <StyledLink>
             <Grid sx={{ paddingTop: 2, paddingRight: 2 }}>
               {settings.mode === 'light' ? (
-                <img src='/images/logos/GeoGuardMainLogo.png' alt="Logo" style={{ paddingTop: 5, paddingLeft: 12, height: '60px' }} />
+                <img src='/images/logos/mainlogo.png' alt="Logo" style={{ paddingTop: 5, paddingLeft: 12, height: '60px' }} />
               ) : (
-                <img src='/images/logos/GeoGuardDarkLogo.png' alt="Logo" style={{ paddingTop: 5, paddingLeft: 12, height: '60px' }} />
+                <img src='/images/logos/mainlogo.png' alt="Logo" style={{ paddingTop: 5, paddingLeft: 12, height: '60px' }} />
               )}
             </Grid>
           </StyledLink>

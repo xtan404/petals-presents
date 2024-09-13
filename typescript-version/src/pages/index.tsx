@@ -119,7 +119,7 @@ const LoginPage = () => {
         });
         // Redirect based on user role
         if (response.data.role === "admin") {
-          router.push('/admin/products');
+          router.push('/admin/dashboard');
         } else if (response.data.role === "user") {
           router.push('/pages/home');
         }

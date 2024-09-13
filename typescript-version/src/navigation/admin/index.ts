@@ -22,27 +22,27 @@ const AdminNavigation = (): VerticalNavItemsType => {
    {
       title: 'Dashboard',
       icon: ViewDashboardOutline,
+      path: '/admin/dashboard'
+    },
+    {
+      title: 'Orders',
+      icon: CurrencyUsd,
       path: '/admin/orders'
     },
     {
-      title: 'Alert Management',
-      icon: AlertOutline,
-      path: '/admin/geo/alerts'
+      title: 'Products',
+      icon: PackageVariant,
+      path: '/admin/products'
     },
     {
-      title: 'Reports',
-      icon: FileOutline,
-      path: '/admin/geo/reports'
-    },
-    {
-      title: 'Help and Support',
-      icon: FaceAgent,
-      path: '/admin/geo/support'
+      title: 'Services',
+      icon: Offer,
+      path: '/admin/services'
     },
     {
       title: 'Logout',
       icon: Logout,
-      path: '/admin/services'
+      path: '/'
     },
     
   ]
