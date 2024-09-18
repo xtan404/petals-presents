@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2024 at 04:05 AM
+-- Generation Time: Sep 19, 2024 at 01:15 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -36,15 +36,6 @@ CREATE TABLE `accounts` (
   `role` varchar(50) DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `accounts`
---
-
-INSERT INTO `accounts` (`user_id`, `firstName`, `lastName`, `email`, `password`, `role`) VALUES
-(1, 'Tristan', 'Pequiro', 'xtanpequiro@gmail.com', 'Natnat29', 'admin'),
-(2, 'Luffy', 'Monkey', 'luffy@gmail.com', 'pirate123', 'user'),
-(3, 'Joshmar', 'Ardepolla', 'josh@gmail.com', 'joshmar123', 'user');
-
 -- --------------------------------------------------------
 
 --
@@ -57,13 +48,6 @@ CREATE TABLE `orders` (
   `order_description` varchar(255) NOT NULL,
   `order_price` float(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`order_id`, `order_name`, `order_description`, `order_price`) VALUES
-(2, 'dean\'s flower', 'yawa', 9999.00);
 
 -- --------------------------------------------------------
 
@@ -83,7 +67,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`productID`, `productName`, `productDesc`, `price`) VALUES
-(1, 'dean\'s flower', 'yawa', 9999.00);
+(1, 'Tulips', 'A bouquet of tulips', 1299.00);
 
 --
 -- Indexes for dumped tables
@@ -115,13 +99,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `order_id` int(50) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `products`
