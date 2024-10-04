@@ -67,21 +67,19 @@ const Shop = () => {
     setValue(newValue);
   };
 
-  const handleAddToCart = async (product: Product
-  ) => { 
+  const handleAddToCart = async (product: { productName: string; productDesc: string; price: string }) => {
     try {
-      const response = await axios.post('http://localhost:8081/add_to_cart', {
+      await axios.post('http://localhost:8081/add_to_cart', {
         order_name: product.productName,
         order_description: product.productDesc,
-        order_price: product.price
-      })
-        .then(response => {
-          window.location.reload()
-        })
-    } catch(error){
+        order_price: product.price // This should now correctly be "399.00" (without a dollar sign)
+      });
+      alert(`${product.productName} added to cart!`);
+    } catch (error) {
       console.error('There was an error adding the order!', error);
-    };
+    }
   };
+  
 
   return (
     <Card>
@@ -121,55 +119,27 @@ const Shop = () => {
         </TabList>
 
         <TabPanel sx={{ p: 0 }} value="flowers">
-  <Grid container spacing={5} sx={{ paddingInlineStart: 2, paddingInlineEnd: 2, paddingTop: 2, paddingBottom: 2 }}>
-    {/* Render CardAppleWatch outside the loop */}
-    <Grid item xs={12} sm={6} md={3}>
-      <CardAppleWatch />
-    </Grid>
-    {/* Render CardBlueFlower outside the loop */}
-    <Grid item xs={12} sm={6} md={3}>
-      <CardBlueFlower/>
-    </Grid>
-    <Grid item xs={12} sm={6} md={3}>
-      <CardAppleRose/>
-    </Grid>
-    <Grid item xs={12} sm={6} md={3}>
-      <CardAppleWatch/>
-    </Grid>
-    {/* Render other cards inside the loop */}
-    {data.map((product) => (
-      <Grid item xs={12} sm={6} md={3} key={product.productID}>
-        <Card sx={{ boxShadow: 3}}>
-          <CardMedia sx={{ height: '9.375rem' }} image={product.productImage || '/images/cards/moneybouquet.jpg'} />
-          <CardContent sx={{ padding: (theme) => `${theme.spacing(3, 5.25, 4)} !important`, maxHeight: '10rem', overflow: 'auto' }}>
-            <Typography variant='h6' sx={{ marginBottom: 2 }}>
-              {product.productName}
-            </Typography>
-            <Typography sx={{ marginBottom: 2 }}>
-              ${product.price}
-            </Typography>
-            <Typography variant='body2'>
-              {product.productDesc}
-            </Typography>
-          </CardContent>
-          <Button
-            variant='contained'
-            sx={{ py: 2.5, width: '100%', borderTopLeftRadius: 0, borderTopRightRadius: 0 }}
-            onClick={() => handleAddToCart(product)}
-          >
-            Add To Cart
-          </Button>
-        </Card>
-      </Grid>
-    ))}
-  </Grid>
-</TabPanel>
-<TabPanel sx={{ p: 0 }} value='security'>
-</TabPanel>
-<TabPanel sx={{ p: 0 }} value='info'>
-</TabPanel>
-</TabContext>
-</Card>
+          <Grid container spacing={5} sx={{ paddingInlineStart: 2, paddingInlineEnd: 2, paddingTop: 2, paddingBottom: 2 }}>
+            {/* Render the Card components with handleAddToCart passed as a prop */}
+            <Grid item xs={12} sm={6} md={3}>
+              <CardAppleWatch addToCart={handleAddToCart} />
+            </Grid>
+            {/* <Grid item xs={12} sm={6} md={3}> 
+              <CardBlueFlower addToCart={handleAddToCart} />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <CardAppleRose addToCart={handleAddToCart} />
+            </Grid> */}
+          </Grid>
+        </TabPanel>
+        <TabPanel sx={{ p: 0 }} value='chocolates'>
+          {/* Additional content for chocolates tab */}
+        </TabPanel>
+        <TabPanel sx={{ p: 0 }} value='presents'>
+          {/* Additional content for presents tab */}
+        </TabPanel>
+      </TabContext>
+    </Card>
   );
 };
 
