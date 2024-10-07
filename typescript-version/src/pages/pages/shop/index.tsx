@@ -20,6 +20,9 @@ import CardAppleWatch from 'src/views/cards/CardAppleWatch';
 import CardMobile from 'src/views/cards/CardMobile';
 import CardBlueFlower from 'src/views/cards/CardBlueFlower';
 import CardAppleRose from 'src/views/cards/CardAppleRose';
+import CardSunflower from 'src/views/cards/CardSunflower';
+import CardChocolateTruffles from 'src/views/cards/CardChocolateTruffles';
+import DarkChocolate from 'src/views/cards/CardDarkChocolate';
 import Swal from 'sweetalert2';
 
 const Tab = styled(MuiTab)<TabProps>(({ theme }) => ({
@@ -124,16 +127,27 @@ const Shop = () => {
             <Grid item xs={12} sm={6} md={3}>
               <CardAppleWatch addToCart={handleAddToCart} />
             </Grid>
-            {/* <Grid item xs={12} sm={6} md={3}> 
+            <Grid item xs={12} sm={6} md={3}> 
               <CardBlueFlower addToCart={handleAddToCart} />
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
               <CardAppleRose addToCart={handleAddToCart} />
-            </Grid> */}
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <CardSunflower addToCart={handleAddToCart} />
+            </Grid>
           </Grid>
         </TabPanel>
         <TabPanel sx={{ p: 0 }} value='chocolates'>
-          {/* Additional content for chocolates tab */}
+        <Grid container spacing={5} sx={{ paddingInlineStart: 2, paddingInlineEnd: 2, paddingTop: 2, paddingBottom: 2 }}>
+            {/* Render the Card components with handleAddToCart passed as a prop */}
+            <Grid item xs={12} sm={6} md={3}>
+              <CardChocolateTruffles addToCart={handleAddToCart} />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}> 
+              <DarkChocolate addToCart={handleAddToCart} />
+            </Grid>
+          </Grid>
         </TabPanel>
         <TabPanel sx={{ p: 0 }} value='presents'>
           {/* Additional content for presents tab */}

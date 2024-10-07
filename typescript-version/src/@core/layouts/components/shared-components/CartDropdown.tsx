@@ -157,7 +157,7 @@ const CartDropdown = () => {
           {data.map((order, key) => (
             <MenuItem key={key} onClick={handleDropdownClose}>
               <Box sx={{ width: '100%', display: 'flex', alignItems: 'center' }}>
-                <Avatar alt="Product Image" src='/images/cards/tulips.jpg' />
+                <Avatar alt="Product Image" src='/images/cards/flower icon.jpg' />
                 <Box sx={{ mx: 4, flex: '1 1', display: 'flex', overflow: 'hidden', flexDirection: 'column' }}>
                   <MenuItemTitle>{order.order_name}</MenuItemTitle>
                   <MenuItemSubtitle variant="body2">{order.order_description}</MenuItemSubtitle>

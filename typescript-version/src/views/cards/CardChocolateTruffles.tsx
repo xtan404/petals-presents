@@ -11,14 +11,14 @@ interface CardAppleWatchProps {
 
 const CardAppleWatch: React.FC<CardAppleWatchProps> = ({ addToCart }) => {
   const product = {
-    productName: "Tulips",
-    productDesc: "a cup-shaped blossom, although some cultivars may have a star or bowl form.",
-    price: "399.00", // Change this to a numeric string
+    productName: "Chocolate Truffles",
+    productDesc: " ",
+    price: "299.00", // Change this to a numeric string
   };
 
   return (
     <Card>
-      <CardMedia sx={{ height: '9.375rem' }} image='/images/cards/tulips.jpg' />
+      <CardMedia sx={{ height: '9.375rem' }} image='/images/cards/chocolate-truffles.jpg' />
       <CardContent>
         <Typography variant='h6' sx={{ marginBottom: 2 }}>
           {product.productName}
