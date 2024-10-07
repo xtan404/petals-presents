@@ -6,7 +6,7 @@ export default function Paypal() {
   useEffect(() => {
     // Load the PayPal SDK script dynamically
     const script = document.createElement("script");
-    script.src = "https://www.paypal.com/sdk/js?client-id=AbqRrxCoI4-tiiFWZDCPIRXcjgkFEvsj4KLEu76zXSsKqmP-ul6ife4rJrSpdx5Nm_Kh-J2APSZgqjt3&currency=CAD";
+    script.src = "https://www.paypal.com/sdk/js?client-id=AbqRrxCoI4-tiiFWZDCPIRXcjgkFEvsj4KLEu76zXSsKqmP-ul6ife4rJrSpdx5Nm_Kh-J2APSZgqjt3&currency=PESO";
     script.async = true;
     document.body.appendChild(script);
 

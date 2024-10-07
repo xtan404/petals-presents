@@ -111,6 +111,14 @@ const CartDropdown = () => {
     const total = orders.reduce((acc, order) => acc + parseFloat(order.order_price), 0);
     setTotalPrice(total);
   };
+  
+
+  // Add the new product to the cart
+  const addToCart = (product: Order) => {
+    const updatedCart = [...data, product];
+    setData(updatedCart);
+    calculateTotal(updatedCart); // Update the total price
+  };
 
   const handleDropdownOpen = (event: SyntheticEvent) => {
     setAnchorEl(event.currentTarget as HTMLElement);
@@ -145,54 +153,36 @@ const CartDropdown = () => {
             <Typography sx={{ fontWeight: 600 }}>Shopping Cart</Typography>
           </Box>
         </MenuItem>
-        {/*<ScrollWrapper>
+        <ScrollWrapper>
           {data.map((order, key) => (
             <MenuItem key={key} onClick={handleDropdownClose}>
               <Box sx={{ width: '100%', display: 'flex', alignItems: 'center' }}>
-                <Avatar alt="Product Image" src='/images/cards/rose.jpg' />
+                <Avatar alt="Product Image" src='/images/cards/flower icon.jpg' />
                 <Box sx={{ mx: 4, flex: '1 1', display: 'flex', overflow: 'hidden', flexDirection: 'column' }}>
                   <MenuItemTitle>{order.order_name}</MenuItemTitle>
                   <MenuItemSubtitle variant="body2">{order.order_description}</MenuItemSubtitle>
                 </Box>
-                <Typography variant="caption" sx={{ fontWeight: 'bold'}}>
+                <Typography variant="caption" sx={{ fontWeight: 'bold' }}>
                   ${order.order_price}
                 </Typography>
               </Box>
             </MenuItem>
           ))}
         </ScrollWrapper>
-        
+
         {/* Total Amount */}
         <MenuItem disableRipple sx={{ py: 1, borderBottom: 0, borderTop: (theme) => `1px solid ${theme.palette.divider}` }}>
           <Box sx={{ width: '100%', display: 'flex', alignItems: 'center', mx: 1 }}>
-            <Box sx={{ mx: 4, flex: '1 1', display: 'flex', overflow: 'hidden', flexDirection: 'column' }}>
-              
-            </Box>
-            <Typography variant="body2" sx={{ fontWeight: 'bold'}}>
-              Total: 
-              <MenuItemTitle sx={{ fontWeight: 'bold', color: 'primary.main' }}>
-                ${totalPrice}
-              </MenuItemTitle>
-              
+            <Typography variant="body2" sx={{ fontWeight: 'bold' }}>
+              Total:
+              <MenuItemTitle sx={{ fontWeight: 'bold', color: 'primary.main' }}>${totalPrice}</MenuItemTitle>
             </Typography>
           </Box>
         </MenuItem>
-<MenuItem disableRipple sx={{ py: 3.5, borderBottom: 0, display: 'flex', flexDirection: 'column' }}>
-  {/* Checkout Button */}
-  {checkout ? (
-    <PayPal />
-  ) : (
-    <Button
-      variant="contained"
-      sx={{ py: 2.5, width: '100%', borderTopLeftRadius: 0, borderTopRightRadius: 0 }}
-      onClick={() => setCheckOut(true)}
-    >
-      Checkout
-    </Button>
-  )}
-</MenuItem>
-
-</Menu>
+        <MenuItem disableRipple sx={{ py: 3.5, borderBottom: 0, display: 'flex', flexDirection: 'column' }}>
+          {checkout ? <PayPal /> : <Button variant="contained" onClick={() => setCheckOut(true)}>Checkout</Button>}
+        </MenuItem>
+      </Menu>
     </Fragment>
   );
 };
