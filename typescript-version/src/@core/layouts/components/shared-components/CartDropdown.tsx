@@ -10,7 +10,6 @@ import MuiMenu, { MenuProps } from '@mui/material/Menu';
 import MuiAvatar, { AvatarProps } from '@mui/material/Avatar';
 import MuiMenuItem, { MenuItemProps } from '@mui/material/MenuItem';
 import Typography, { TypographyProps } from '@mui/material/Typography';
-import PayPal from 'src/@core/layouts/components/shared-components/paypal/PayPal';
 
 // ** Icons Imports
 import CartOutline from 'mdi-material-ui/CartOutline';
@@ -18,6 +17,9 @@ import router from 'next/router';
 
 // ** Third Party Components
 import PerfectScrollbarComponent from 'react-perfect-scrollbar';
+import PayPal from '../shared-components/paypal/PayPal';
+
+
 
 // ** Styled Menu component
 const Menu = styled(MuiMenu)<MenuProps>(({ theme }) => ({
@@ -98,6 +100,7 @@ const CartDropdown = () => {
     if (!loggedIn) {
       router.push('/401');
     }
+    // Fetch orders from backend
     fetch('http://localhost:8081/orders')
       .then((res) => res.json())
       .then((data: Order[]) => {
@@ -112,7 +115,6 @@ const CartDropdown = () => {
     setTotalPrice(total);
   };
   
-
   // Add the new product to the cart
   const addToCart = (product: Order) => {
     const updatedCart = [...data, product];
@@ -179,8 +181,16 @@ const CartDropdown = () => {
             </Typography>
           </Box>
         </MenuItem>
+
+        {/* PayPal Checkout Section */}
         <MenuItem disableRipple sx={{ py: 3.5, borderBottom: 0, display: 'flex', flexDirection: 'column' }}>
-          {checkout ? <PayPal /> : <Button variant="contained" onClick={() => setCheckOut(true)}>Checkout</Button>}
+          {checkout ? (
+            <PayPal /> // Render PayPal component if checkout is true
+          ) : (
+            <Button variant="contained" onClick={() => setCheckOut(true)}>
+              Checkout
+            </Button>
+          )}
         </MenuItem>
       </Menu>
     </Fragment>
