@@ -56,13 +56,30 @@ const OrderTable = () => {
           <TableBody>
               <TableRow sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
                 <TableCell sx={{ py: theme => `${theme.spacing(0.5)} !important` }}>
-                  <Box sx={{ display: 'inline-block', padding: '4px 8px', backgroundColor: 'red', borderRadius: '16px', color: 'white' }}>
-                    <Typography sx={{ fontWeight: 500, fontSize: '0.875rem !important' }}><strong>Danger</strong></Typography>
+                  <Box sx={{ display: 'inline-block', padding: '4px 8px', backgroundColor: 'yellow', borderRadius: '16px', color: 'white' }}>
+                    <Typography sx={{ fontWeight: 500, fontSize: '0.875rem !important' }}>Sunflower</Typography>
                   </Box>
                 </TableCell>
-                <TableCell>Immediate Evacuation Required! The water level has reached the red threshold.
-                  Please evacuate immediately to ensure your safety.</TableCell>
-                <TableCell>November 8, 2023</TableCell>
+                <TableCell>an annual herbaceous plant belonging to the Asteraceae family.</TableCell>
+                <TableCell>October 10, 2024</TableCell>
+              </TableRow>
+              <TableRow sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
+                <TableCell sx={{ py: theme => `${theme.spacing(0.5)} !important` }}>
+                  <Box sx={{ display: 'inline-block', padding: '4px 8px', backgroundColor: 'lightblue', borderRadius: '16px', color: 'white' }}>
+                    <Typography sx={{ fontWeight: 500, fontSize: '0.875rem !important' }}>Forget-Me-Not</Typography>
+                  </Box>
+                </TableCell>
+                <TableCell>a genus of flowering plants in the family Boraginaceae, known as scorpion grass.</TableCell>
+                <TableCell>October 2, 2024</TableCell>
+              </TableRow>
+              <TableRow sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
+                <TableCell sx={{ py: theme => `${theme.spacing(0.5)} !important` }}>
+                  <Box sx={{ display: 'inline-block', padding: '4px 8px', backgroundColor: 'pink', borderRadius: '16px', color: 'white' }}>
+                    <Typography sx={{ fontWeight: 500, fontSize: '0.875rem !important' }}>Rose</Typography>
+                  </Box>
+                </TableCell>
+                <TableCell>perennial flowering plants renowned for their beauty and fragrance.</TableCell>
+                <TableCell>September 2, 2024</TableCell>
               </TableRow>
           </TableBody>
         </Table>
